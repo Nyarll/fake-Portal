@@ -16,6 +16,7 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.E))
         {
             if(curObject == null)
@@ -62,7 +63,7 @@ public class Pickup : MonoBehaviour
 
     void reposObject()
     {
-        Transform child = transform.GetChild(1).transform;
+        Transform child = transform.GetChild(0).GetChild(0).transform;
         curObject.transform.position = child.position;
         curObject.transform.rotation = transform.rotation;
     }
